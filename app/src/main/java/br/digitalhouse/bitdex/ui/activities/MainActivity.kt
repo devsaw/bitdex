@@ -1,12 +1,12 @@
-package br.digitalhouse.bitdex.login
+package br.digitalhouse.bitdex.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.digitalhouse.bitdex.R
 
-class LoginActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_main)
     }
 }
