@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/aclonica</item>
+        <item>@font/akronim</item>
+        <item>@font/aladin</item>
+        <item>@font/allerta</item>
+        <item>@font/andada</item>
+        <item>@font/bilbo_swash_caps</item>
+        <item>@font/chau_philomene_one</item>
+        <item>@font/chewy</item>
+        <item>@font/cinzel_decorative</item>
+        <item>@font/grand_hotel</item>
+        <item>@font/londrina_shadow</item>
+    </array>
+</resources>

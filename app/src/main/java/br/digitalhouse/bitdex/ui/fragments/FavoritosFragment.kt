@@ -1,25 +1,41 @@
 package br.digitalhouse.bitdex.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.digitalhouse.bitdex.R
-import br.digitalhouse.bitdex.model.ListBuilder
-import br.digitalhouse.bitdex.adapter.FavoritosAdapter
+import br.digitalhouse.bitdex.ui.adapter.FavoritosAdapter
+import br.digitalhouse.bitdex.ui.model.Cryptos
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class FavoritosFragment: Fragment(R.layout.fragment_favoritos){
+class FavoritosFragment : Fragment(R.layout.fragment_favoritos) {
+    private lateinit var favoritosAdapter: FavoritosAdapter
+    private lateinit var floatingButton: FloatingActionButton
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        construir()
-
+        setupFavoritosAdapter()
+        initViews(view)
+        setupListener()
     }
 
-    fun construir() {
-        var listBuilder = ListBuilder()
-        var recyclerView = view?.findViewById<RecyclerView>(R.id.rcFavorite)
-        recyclerView?.adapter = FavoritosAdapter(requireContext(), listBuilder.listaDeTopicos)
-        listBuilder.add(R.drawable.logo, "25%", "CatCoin", "1.95")
+    private fun setupFavoritosAdapter() {
+        val listaFavoritos: MutableList<Cryptos> = mutableListOf()
+        favoritosAdapter = FavoritosAdapter(listaFavoritos)
+        view?.findViewById<RecyclerView>(R.id.rcFavorite)?.adapter = favoritosAdapter
+    }
+
+    private fun initViews(view: View) {
+        floatingButton = view.findViewById(R.id.floatingButton)
+        floatingButton.visibility = View.VISIBLE
+    }
+
+    private fun setupListener() {
+        floatingButton.setOnClickListener {
+            findNavController().navigate(R.id.cryptosFragment)
+        }
     }
 }

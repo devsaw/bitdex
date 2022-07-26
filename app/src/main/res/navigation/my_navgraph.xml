@@ -13,9 +13,48 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="br.digitalhouse.bitdex.ui.fragments.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_appFragment"
             app:destination="@id/appFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_phoneFragment"
+            app:destination="@id/phoneFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="br.digitalhouse.bitdex.ui.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="br.digitalhouse.bitdex.ui.fragments.PhoneFragment"
+        android:label="fragment_phone"
+        tools:layout="@layout/fragment_phone" >
+        <action
+            android:id="@+id/action_phoneFragment_to_appFragment"
+            app:destination="@id/appFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="br.digitalhouse.bitdex.ui.fragments.FavoritosFragment"
+        android:label="fragment_favoritos"
+        tools:layout="@layout/fragment_favoritos" >
+        <action
+            android:id="@+id/action_favoritosFragment_to_cryptosFragment"
+            app:destination="@id/cryptosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptosFragment"
+        android:name="br.digitalhouse.bitdex.ui.fragments.CryptosFragment"
+        android:label="fragment_cryptos"
+        tools:layout="@layout/fragment_cryptos" />
 </navigation>

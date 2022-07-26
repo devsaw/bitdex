@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title=""
+        android:id="@+id/favorite"
+        android:icon="@drawable/favoritos_foreground"/>
+    <item
+        android:title=""
+        android:id="@+id/converter"
+        android:icon="@drawable/conversor_foreground"/>
+
+</menu>
