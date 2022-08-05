@@ -57,10 +57,10 @@ class PhoneFragment : Fragment(R.layout.fragment_phone), ToastInterface {
                     progressBar.visibility = View.VISIBLE
                     signInWithPhoneAuthCredential(credential)
                 } else {
-                    toast("Please Enter Correct number")
+                    toast("Please Enter Correct Number")
                 }
             } else {
-                toast("Please Enter OTP")
+                toast("Please Enter Code")
             }
         }
 
@@ -79,10 +79,10 @@ class PhoneFragment : Fragment(R.layout.fragment_phone), ToastInterface {
                     PhoneAuthProvider.verifyPhoneNumber(options)
 
                 } else {
-                    toast("Please enter correct number")
+                    toast("Please Enter Correct Number")
                 }
             } else {
-                toast("Please enter number")
+                toast("Please Enter Your Number")
             }
         }
     }

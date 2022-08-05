@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#7fff00</color>
     <color name="red">#FF0000</color>
-    <color name="preco">#B131F1</color>
+    <color name="preco">#1E6A3E</color>
     <color name="cinza">#86939393</color>
     <color name="search">#383838</color>
+    <color name="newcolor">#CCFF33</color>
 </resources>

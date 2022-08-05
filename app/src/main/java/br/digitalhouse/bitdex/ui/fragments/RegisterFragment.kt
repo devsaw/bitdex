@@ -34,12 +34,19 @@ class RegisterFragment : Fragment(R.layout.fragment_register), ToastInterface {
 
     private fun setupListener() {
         registerbtn.setOnClickListener {
-            accessViewModel.onCreateUser(emailTxt.text.toString(),passwordTxt.text.toString())
+            val emailTxt = emailTxt.text.toString()
+            val passwordTxt = passwordTxt.text.toString()
+            if (textIsBlank(emailTxt, passwordTxt)) {
+                toast("Fill In The Fields!")
+            } else {
+                accessViewModel.onCreateUser(emailTxt, passwordTxt)
+            }
         }
     }
+
     private fun setupObserver() {
-        accessViewModel.createUserLiveData.observe(viewLifecycleOwner){
-            if(it){
+        accessViewModel.createUserLiveData.observe(viewLifecycleOwner) {
+            if (it) {
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
                 toast("Usuario Criado com sucesso!")
             } else {
@@ -52,4 +59,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register), ToastInterface {
         Toast.makeText(requireContext(), toast, Toast.LENGTH_SHORT).show()
     }
 
+    private fun textIsBlank(login: String, password: String): Boolean {
+        return login.isBlank() || password.isBlank()
+    }
 }

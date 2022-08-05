@@ -4,13 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.digitalhouse.bitdex.R
-import br.digitalhouse.bitdex.ui.model.Cryptos
+import br.digitalhouse.bitdex.data.dto.*
 
-class CryptosAdapter(val listCryptos: MutableList<Cryptos>) :
+class CryptosAdapter(val listData: MutableList<Cryptos>) :
     RecyclerView.Adapter<CryptosAdapter.CryptoHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoHolder {
@@ -19,27 +18,34 @@ class CryptosAdapter(val listCryptos: MutableList<Cryptos>) :
         return CryptoHolder(layoutInflater)
     }
 
-
     override fun onBindViewHolder(holder: CryptoHolder, position: Int) {
-        holder.bind(listCryptos[position])
+        holder.bind(listData[position])
     }
 
     override fun getItemCount(): Int {
-        return listCryptos.size
+        return listData.size
     }
 
-    fun add(listagem: Cryptos) {
-        this.listCryptos.add(listagem)
+    fun add(list: Cryptos) {
+        this.listData.clear()
+        this.listData.add(list)
         this.notifyDataSetChanged()
     }
 
     inner class CryptoHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imagem = itemView.findViewById<ImageView>(R.id.imageRecyclerFav)
-        val titulo = itemView.findViewById<TextView>(R.id.nomeCryptoFav)
-        val variacao = itemView.findViewById<TextView>(R.id.variarPrecoFav)
-        val valor = itemView.findViewById<TextView>(R.id.variarValorFav)
+        val symbol = itemView.findViewById<TextView>(R.id.symbol)
+        val price = itemView.findViewById<TextView>(R.id.price)
+        val volatility = itemView.findViewById<TextView>(R.id.variacao)
+        val nameCrypto = itemView.findViewById<TextView>(R.id.nameCrypto)
         val addButton = itemView.findViewById<ImageButton>(R.id.btnStar)
-        fun bind(list : Cryptos) {
+        fun bind(cryptos: Cryptos) {
+            symbol.text = cryptos.data[0].symbol
+            nameCrypto.text = cryptos.data[0].name
+            price.text = cryptos.data[0].quote.usd.price.toString()
+            volatility.text = cryptos.data[0].quote.usd.volatility.toString()
+        }
+
+        fun addIten(){
 
         }
     }

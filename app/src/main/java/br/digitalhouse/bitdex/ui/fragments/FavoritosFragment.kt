@@ -1,15 +1,17 @@
 package br.digitalhouse.bitdex.ui.fragments
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.digitalhouse.bitdex.R
+import br.digitalhouse.bitdex.data.dto.Cryptos
 import br.digitalhouse.bitdex.ui.adapter.FavoritosAdapter
-import br.digitalhouse.bitdex.ui.model.Cryptos
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.launch
 
 class FavoritosFragment : Fragment(R.layout.fragment_favoritos) {
     private lateinit var favoritosAdapter: FavoritosAdapter

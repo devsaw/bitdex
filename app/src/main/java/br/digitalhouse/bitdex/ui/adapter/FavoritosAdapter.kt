@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.digitalhouse.bitdex.R
-import br.digitalhouse.bitdex.ui.model.Cryptos
+import br.digitalhouse.bitdex.data.dto.Cryptos
 
 class FavoritosAdapter(val listFavoritos: MutableList<Cryptos>) :
     RecyclerView.Adapter<FavoritosAdapter.FavoritosHolder>() {

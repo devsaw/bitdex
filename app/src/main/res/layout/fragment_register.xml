@@ -45,7 +45,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="265dp"
         android:layout_height="60dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:hint="Set your password..."
         android:textColorHint="@color/black"
         app:endIconMode="password_toggle"
@@ -55,9 +55,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textField"
-            android:inputType="textPassword"
             android:layout_width="265dp"
-            android:layout_height="55dp" />
+            android:layout_height="55dp"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

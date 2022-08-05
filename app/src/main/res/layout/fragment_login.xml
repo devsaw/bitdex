@@ -74,12 +74,12 @@
             android:layout_height="54dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.gms.common.SignInButton
+    <ImageView
         android:id="@+id/btGoogle"
-        android:layout_width="45dp"
+        android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginTop="51dp"
-        android:backgroundTint="@color/green"
+        android:background="@drawable/letragg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.199"
         app:layout_constraintStart_toStartOf="parent"

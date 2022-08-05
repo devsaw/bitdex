@@ -7,13 +7,24 @@
     android:background="@drawable/gradient_background"
     tools:context=".ui.fragments.FavoritosFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/londrina_shadow"
+        android:text="Favorites"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcFavorite"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="7"
-        tools:listitem="@layout/recycler_item_delete" />
+        tools:listitem="@layout/recycler_item_delete"
+        android:layout_marginTop="40dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingButton"
@@ -27,6 +38,8 @@
         android:clickable="true"
         android:src="@drawable/add_foreground"
         app:tint="@color/green" />
+
+
 
 
 </RelativeLayout>

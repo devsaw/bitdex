@@ -1,4 +1,4 @@
-package br.digitalhouse.bitdex
+package br.digitalhouse.bitdex.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import br.digitalhouse.bitdex.R
