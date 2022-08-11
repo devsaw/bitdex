@@ -35,6 +35,7 @@ Para esse projeto foi utilizado:
 - Jetpack
 - Coroutines
 - Bottom Navigation
+- Material Design
 - Navigation
 - Extensão Ktx
 - Biblioteca Glide.
