@@ -40,10 +40,10 @@ Para esse projeto foi utilizado:
 
 ## 📱 Imagens
 
-![img4](https://user-images.githubusercontent.com/95660431/184258151-03571c7b-639f-4106-9839-ab1abf45ac4e.jpeg)
 ![img1](https://user-images.githubusercontent.com/95660431/184258153-20b2209a-4263-4b54-b174-2741279ecd7b.jpeg)
 ![img2](https://user-images.githubusercontent.com/95660431/184258156-52f94f3d-1e2b-4df8-9bb1-306d1b185c54.jpeg)
 ![img3](https://user-images.githubusercontent.com/95660431/184258157-786c9819-622b-44a8-9a3a-271615a0139f.jpeg)
+![img4](https://user-images.githubusercontent.com/95660431/184258151-03571c7b-639f-4106-9839-ab1abf45ac4e.jpeg)
 
 ## 📝 Licença
 
