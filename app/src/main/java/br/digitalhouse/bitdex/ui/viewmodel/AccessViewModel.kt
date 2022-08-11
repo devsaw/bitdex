@@ -1,18 +1,16 @@
 package br.digitalhouse.bitdex.ui.viewmodel
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.digitalhouse.bitdex.ui.model.AccessUserModel
 import br.digitalhouse.bitdex.ui.model.User
 import br.digitalhouse.bitdex.ui.model.UserDAO
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -20,8 +18,8 @@ import com.google.firebase.ktx.Firebase
 class AccessViewModel : ViewModel() {
     private var firebaseAuth: FirebaseAuth = Firebase.auth
     lateinit var gso: GoogleSignInOptions
-    lateinit var gsc: GoogleSignInClient
     val GOOGLE_REQUEST_CODE = 1000
+    val accessUserModel = AccessUserModel()
 
 
     private var onUserRequestToRegister = MutableLiveData<Boolean>()
@@ -70,7 +68,7 @@ class AccessViewModel : ViewModel() {
                 .requestEmail()
                 .build()
         } catch (e: Exception) {
-            Log.e("TAG", "Erro")
+            Log.e("Google", "Erro")
         }
         return GoogleSignIn.getClient(activity, gso).signInIntent
     }
@@ -81,13 +79,13 @@ class AccessViewModel : ViewModel() {
     }
 
 
-    fun signInWithTwitter(activity: Activity, firebaseAuth: FirebaseAuth) {
+    fun signInWithTwitter(activity: Activity) {
         val pendingResult = FirebaseAuth.getInstance().pendingAuthResult
         if (pendingResult != null) {
             pendingResult.addOnSuccessListener { authResult ->
                 authResponse.postValue(authResult)
             }.addOnFailureListener {
-                Log.e("twitter", "Falha ao autenticar", it)
+                Log.e("Twitter", "Falha ao autenticar", it)
                 authResponse.postValue(null)
             }
         } else {
@@ -96,9 +94,26 @@ class AccessViewModel : ViewModel() {
                 .addOnSuccessListener { authResult ->
                     authResponse.postValue(authResult)
                 }.addOnFailureListener {
-                    Log.e("twitter", "Falha ao autenticar", it)
+                    Log.e("Twitter", "Falha ao autenticar", it)
                     authResponse.postValue(null)
                 }
         }
+    }
+
+    fun validPassword(password: String): Boolean {
+        val vpchar = accessUserModel.validPassChar(password)
+        val vpsize = accessUserModel.validPassSize(password)
+        var function = false
+        if (vpsize && vpchar)
+            function = true
+        return function
+    }
+
+    fun validEmail(email: String): Boolean{
+        val vechar = accessUserModel.validEmailChar(email)
+        var funcEmail = false
+        if (vechar)
+            funcEmail = true
+        return funcEmail
     }
 }

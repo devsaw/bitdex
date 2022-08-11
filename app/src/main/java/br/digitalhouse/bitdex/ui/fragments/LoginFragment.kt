@@ -3,7 +3,6 @@ package br.digitalhouse.bitdex.ui.fragments
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,9 +15,6 @@ import br.digitalhouse.bitdex.databinding.FragmentLoginBinding
 import br.digitalhouse.bitdex.ui.interfaces.ToastInterface
 import br.digitalhouse.bitdex.ui.viewmodel.AccessViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.common.api.ApiException
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
@@ -26,9 +22,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class LoginFragment : Fragment(R.layout.fragment_login), ToastInterface {
-    var CONSUMER_KEY = "7qRdPwBOWkc57icZS1y1CVTce"
-    var CONSUMER_SECRET = "OgEeB4j61wAF97BIx41fEKKOFDzbwfVy9UtJttEE8rBoRP7sc8"
-    var CALLBACK_URL = "https://bitdex-7afd6.firebaseapp.com/__/auth/handler"
 
     private val accessViewModel: AccessViewModel by viewModels()
     private lateinit var binding: FragmentLoginBinding
@@ -82,7 +75,7 @@ class LoginFragment : Fragment(R.layout.fragment_login), ToastInterface {
         }
 
         binding.btnTwitter.setOnClickListener {
-            accessViewModel.signInWithTwitter(requireActivity(), firebaseAuth)
+            accessViewModel.signInWithTwitter(requireActivity())
         }
     }
 

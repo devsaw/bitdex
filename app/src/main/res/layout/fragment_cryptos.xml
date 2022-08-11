@@ -21,7 +21,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:queryBackground="@color/search"
+        android:queryBackground="@color/searchTest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="@id/divisor_one"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/recycler_item_favorites"
-        tools:itemCount="8"/>
+        tools:itemCount="9"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

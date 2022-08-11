@@ -8,7 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.digitalhouse.bitdex.R
-import br.digitalhouse.bitdex.data.dto.Cryptos
+import br.digitalhouse.bitdex.data.dto.cryptos.Cryptos
 import br.digitalhouse.bitdex.ui.adapter.FavoritosAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.launch

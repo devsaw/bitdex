@@ -6,112 +6,94 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/symbol"
-        android:layout_width="77dp"
-        android:layout_height="24dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+    <ImageView
+        android:id="@+id/imageRecyclerFav"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:maxLength="6"
-        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:text="Bitcoin" />
+        app:srcCompat="@android:drawable/presence_online" />
 
     <TextView
-        android:id="@+id/price"
-        android:layout_width="138dp"
-        android:layout_height="22dp"
-        android:layout_below="@+id/symbol"
-        android:layout_alignTop="@+id/symbol"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="3dp"
-        android:maxLength="7"
+        android:id="@+id/nomeCryptoFav"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/imageRecyclerFav"
+        tools:text="Bitcoin"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:maxLength="11"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/symbolFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="207dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/imageRecyclerFav"
+        tools:text="BTC"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rankFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nomeCryptoFav"
+        android:layout_alignTop="@+id/nomeCryptoFav"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/imageRecyclerFav"
+        android:text="Price $"
         android:textColor="@color/preco"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/txtprice"
-        app:layout_constraintTop_toBottomOf="@+id/nameCrypto"
-        tools:ignore="MissingConstraints"
-        tools:text="1.95" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageRecyclerFav"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.979" />
 
     <TextView
-        android:id="@+id/variacao"
-        android:layout_width="60dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:layout_toStartOf="@+id/btnStar"
-        android:maxLength="4"
-        android:textColor="@color/red"
+        android:id="@+id/posRankFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nomeCryptoFav"
+        android:layout_alignTop="@+id/nomeCryptoFav"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="48dp"
+        android:layout_toEndOf="@+id/imageRecyclerFav"
+        android:textColor="@color/blue"
         android:textSize="18dp"
+        android:maxLength="8"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/txtvariacao"
-        app:layout_constraintTop_toBottomOf="@+id/price"
-        tools:ignore="MissingConstraints"
-        tools:text="25%" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
 
     <ImageButton
-        android:id="@+id/btnStar"
+        android:id="@+id/btnFav"
         android:layout_width="57dp"
         android:layout_height="53dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:background="@null"
         android:src="@drawable/favs_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
-
-    <TextView
-        android:id="@+id/nameCrypto"
-        android:layout_width="214dp"
-        android:layout_height="24dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="100dp"
-        android:maxLength="20"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:text="Nome" />
-
-    <TextView
-        android:id="@+id/txtprice"
-        android:layout_width="69dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="3dp"
-        android:text="Price $"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/symbol"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/txtvariacao"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="1dp"
-        android:text="24H  %"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtprice"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintVertical_bias="0.514" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

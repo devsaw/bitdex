@@ -1,16 +1,16 @@
 package br.digitalhouse.bitdex.data
 
 import android.util.Log
-import br.digitalhouse.bitdex.data.dto.CryptosInterface
+import br.digitalhouse.bitdex.data.dto.cryptos.CryptosInterface
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val BASE_URL = "https://pro-api.coinmarketcap.com"
+private const val BASE_URL = "https://api.coingecko.com/"
 
 private val interceptor = HttpLoggingInterceptor {
-    Log.d("RETROFIT_CLIENT", it)
+    Log.d("RETROFIT_CLIENT_CRYPT", it)
 }
     .apply { level = HttpLoggingInterceptor.Level.BODY }
 
@@ -24,4 +24,4 @@ private val retrofit = Retrofit.Builder()
     .client(client)
     .build()
 
-val CryptosApi: CryptosInterface = retrofit.create(CryptosInterface::class.java)
+val cryptosApi: CryptosInterface = retrofit.create(CryptosInterface::class.java)

@@ -39,7 +39,15 @@ class RegisterFragment : Fragment(R.layout.fragment_register), ToastInterface {
             if (textIsBlank(emailTxt, passwordTxt)) {
                 toast("Fill In The Fields!")
             } else {
-                accessViewModel.onCreateUser(emailTxt, passwordTxt)
+                if (accessViewModel.validEmail(emailTxt)) {
+                    if (accessViewModel.validPassword(passwordTxt)) {
+                        accessViewModel.onCreateUser(emailTxt, passwordTxt)
+                    }else {
+                        toast("Password is invalid")
+                    }
+                }else {
+                    toast("Email is invalid")
+                }
             }
         }
     }

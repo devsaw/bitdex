@@ -14,15 +14,15 @@
         android:text="Favorites"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="35dp"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcFavorite"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="7"
+        tools:itemCount="9"
         tools:listitem="@layout/recycler_item_delete"
         android:layout_marginTop="40dp"/>
 

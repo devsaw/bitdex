@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.digitalhouse.bitdex.R
-import br.digitalhouse.bitdex.data.dto.Cryptos
+import br.digitalhouse.bitdex.data.dto.cryptos.Cryptos
 
 class FavoritosAdapter(val listFavoritos: MutableList<Cryptos>) :
     RecyclerView.Adapter<FavoritosAdapter.FavoritosHolder>() {
@@ -34,11 +34,11 @@ class FavoritosAdapter(val listFavoritos: MutableList<Cryptos>) :
     }
 
     inner class FavoritosHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imagem = itemView.findViewById<ImageView>(R.id.imageRecyclerDel)
-        val titulo = itemView.findViewById<TextView>(R.id.nomeCryptoDel)
-        val variacao = itemView.findViewById<TextView>(R.id.variarPrecoDel)
-        val valor = itemView.findViewById<TextView>(R.id.variarValorDel)
-        val dellbtn = itemView.findViewById<ImageButton>(R.id.btnDell)
+        val imageDel = itemView.findViewById<ImageView>(R.id.imageRecyclerDel)
+        val titleDel = itemView.findViewById<TextView>(R.id.nomeCryptoDel)
+        val symbolDel = itemView.findViewById<TextView>(R.id.symbolDel)
+        val rankDel = itemView.findViewById<TextView>(R.id.posRankDel)
+        val delBtn = itemView.findViewById<ImageButton>(R.id.btnDell)
         fun bind(list : Cryptos) {
 
         }
