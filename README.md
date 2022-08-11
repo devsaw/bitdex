@@ -8,7 +8,7 @@ e também com um conversor de grande utilidade para quem desfruta do segmento.
 
 ## 🔧 App desenvolvido em Kotlin
 
-### 💻 Funcionalidades
+## 💻 Funcionalidades
 
 O projeto está sendo desenvolvido com as seguintes tarefas:
 
@@ -37,6 +37,10 @@ Para esse projeto foi utilizado:
 - Navigation
 - Extensão Ktx
 - Biblioteca Glide.
+
+## 📱 Imagens
+
+
 
 ## 📝 Licença
 
