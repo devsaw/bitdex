@@ -34,6 +34,7 @@ Para esse projeto foi utilizado:
 - OkHttp
 - Jetpack
 - Coroutines
+- Bottom Navigation
 - Navigation
 - Extensão Ktx
 - Biblioteca Glide.
