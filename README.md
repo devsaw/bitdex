@@ -1,10 +1,14 @@
-# BitDex :raising_hand_man:
+# BitDex 🐈‍⬛
   
-App feito para comunidade de cryptomoedas.
+Aplicativo feito para comunidade de cryptomoedas.
 
-## 🔧 [Kotlin]
+:raising_hand_man: Olá! Essa aplicação conta com diversas funcionalidades, 
+dentre elas a opção de favoritar as informações de uma cryptomoeda para acompanhamento em tempo real de valores,
+e também com um conversor de grande utilidade para quem desfruta do segmento.
 
-### :wrench: Ajustes e melhorias
+## 🔧 App desenvolvido em Kotlin
+
+### 💻 Funcionalidades
 
 O projeto está sendo desenvolvido com as seguintes tarefas:
 
@@ -21,7 +25,7 @@ O projeto está sendo desenvolvido com as seguintes tarefas:
 Para esse projeto foi utilizado:
 - Arquitetura MVVM
 - Persistência de dados com Room
-- viewBinding
+- ViewBinding
 - Criação de conta e autenticação com Firebase
 - Firebase analytics
 - Firebase crashlytics
@@ -33,8 +37,6 @@ Para esse projeto foi utilizado:
 - Navigation
 - Extensão Ktx
 - Biblioteca Glide.
-
-## 💻 
 
 ## 📝 Licença
 
